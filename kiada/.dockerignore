@@ -1,0 +1,26 @@
+# Infrastructure & Deployment
+.kubectl/
+k8s/
+kubernetes/
+helm/
+terraform/
+*.yaml
+*.yml
+
+# Version control & Local Dev
+.git
+.gitignore
+.dockerignore
+Docker*
+docker-compose*.yml
+
+# Environment & Secrets
+.env*
+*.pem
+*.key
+
+# Dependencies & Build artifacts (language-specific)
+node_modules/
+target/
+dist/
+__pycache__/
