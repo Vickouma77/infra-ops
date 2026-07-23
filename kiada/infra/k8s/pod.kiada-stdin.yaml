@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: kiada
-  - image: vickouma/kiada:0.2
-  stdin: true
-  ports: 
-  - containerPort: 8080
+    image: vickouma/kiada:0.2
+    stdin: true
+    ports: 
+    - containerPort: 8080
