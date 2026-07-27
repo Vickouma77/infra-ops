@@ -3,22 +3,22 @@ kind: Pod
 metadata:
   name: kiada-init
 spec:
-  initContainer:
-    - name: init-demo
-      image: vickouma/init-demo:0.1
-    - name: network-check
-      image: network-connectivity-checker:0.1
+  initContainers:
+  - name: init-demo
+    image: vickouma/init-demo:0.1
+  - name: network-check
+    image: vickouma/network-connectivity-checker:0.1
   containers:
-    - name: kiada
-      image: vickouma/kiada:0.2
-      stdin: true
-      ports:
-        - name: http
-          containerPort: 8080
-    - name: envoy
-      image: vickouma/kiada-ssl-proxy:0.1
-      ports:
-        - name: https
-          containerPort: 8443
-        - name: admin
-          containerPort: 9901
+  - name: kiada
+    image: vickouma/kiada:0.2
+    stdin: true
+    ports:
+    - name: http
+      containerPort: 8080
+  - name: envoy
+    image: vickouma/kiada-ssl-proxy:0.1
+    ports:
+    - name: https
+      containerPort: 8443
+    - name: admin
+      containerPort: 9901
