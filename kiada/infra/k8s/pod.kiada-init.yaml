@@ -6,8 +6,10 @@ spec:
   initContainers:
   - name: init-demo
     image: vickouma/init-demo:0.1
+    imagePullPolicy: Always
   - name: network-check
     image: vickouma/network-connectivity-checker:0.1
+    imagePullPolicy: Always
   containers:
   - name: kiada
     image: vickouma/kiada:0.2
